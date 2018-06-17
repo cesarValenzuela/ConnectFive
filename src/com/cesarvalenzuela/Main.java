@@ -15,6 +15,6 @@ public class Main {
 
     public void play() {
         ConsoleUI playGame = new ConsoleUI();
-        playGame.drawBoard();
+        playGame.startGame();
     }
 }

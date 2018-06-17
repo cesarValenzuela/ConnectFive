@@ -22,8 +22,9 @@ public class Board {
         board = new String[15][15];
     }
 
-    public void placePiece(int x, int y) {
 
+    public void placePiece(int x, int y, String piece) {
+        board[x][y] = piece;
     }
 
     public String[][] getBoard() {

@@ -1,5 +1,9 @@
 package com.cesarvalenzuela;
 
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.Scanner;
+
 /**
  * Author: Cesar Valenzuela
  * Date: 6/11/2018
@@ -11,9 +15,30 @@ package com.cesarvalenzuela;
 public class ConsoleUI {
 
     Board board;
+    InputStream in;
+    OutputStream out;
 
     public ConsoleUI() {
         board = new Board();
+    }
+
+    public void startGame() {
+        Scanner scnr = new Scanner(System.in);
+        int x, y;
+        try {
+
+            while (true) {
+                drawBoard();
+                System.out.println("Player 1 type where to place: x y");
+                x = scnr.nextInt();
+                y = scnr.nextInt();
+
+                System.out.print(x + " " + y);
+            }
+
+        } catch (Exception e) {
+            System.out.println("something went wrong");
+        }
     }
 
     public void drawBoard() {
