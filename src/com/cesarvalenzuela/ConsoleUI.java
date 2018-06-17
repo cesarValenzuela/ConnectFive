@@ -32,8 +32,18 @@ public class ConsoleUI {
                 System.out.println("Player 1 type where to place: x y");
                 x = scnr.nextInt();
                 y = scnr.nextInt();
+                // place token on board
+                board.placePiece(x - 1,y - 1,"X");
+                // Check for win condition
+                // board.checkWin()
+                // BREAK if TRUE - CONGRATULATE
 
-                System.out.print(x + " " + y);
+                System.out.println("Player 2 type where to place: x y");
+                x = scnr.nextInt();
+                y = scnr.nextInt();
+                board.placePiece(x - 1,y - 1,"O");
+
+
             }
 
         } catch (Exception e) {
